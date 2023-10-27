@@ -1,0 +1,230 @@
+:root{
+    --ama: #f1c40f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.main-header img{
+    width:20px;
+    height:20px;
+}
+
+.main-header p{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.main-header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 5%;
+    padding: 20px 20px;
+    top:0;
+    background-color: rgb(247 124 210);
+    border: 2px solid black;
+    z-index: 3;
+}
+
+.main-header span{
+    position:relative;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height:100%;
+    left:0;
+}
+
+.main-header div{
+    position: relative;
+    width: 40%;
+    height: 100%;
+    right: 0;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar li{
+    list-style: none;
+    font-size: 20px;
+}
+
+.navbar ul{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar li a{
+    color: black;
+    text-decoration: none;
+}
+
+#pagina_completa{
+    position: relative;
+    margin-top: calc(5% + 20px);
+}
+
+#suscripcion{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 200px
+}
+
+form{
+    display: block;
+}
+
+#suscripcion input[type='email'] {
+    max-width: 275px;
+    width: 100%;
+    margin: 10px;
+    padding: 5px;
+}
+
+#suscripcion input[type='submit']:hover,
+.btn-a:hover,
+.btn-d:hover{
+    background-color: #edf10f;
+}
+
+#suscripcion input[type='submit']:active,
+.btn-a:active,
+.btn-d:active{
+    background-color: #f7d00a;
+}
+
+input[type='submit']{
+    max-width: 150px;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+    border: 0;
+    font-weight: bold;
+    background-color: var(--ama);
+}
+
+.container{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ventaja{
+    display: flex;
+}
+
+.ventaja .descripcion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width:80vw;
+}
+
+#Ventajas{
+    margin: 0 20px;
+}
+
+#Ventajas .icono{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    width: 20vw;
+    color: rgb(17, 60, 176);
+}
+
+#Como_funciona{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#Como_funciona div{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-a, .btn-d{
+    display: inline;
+    text-align: center;
+    margin: 5px;
+    max-width: 150px;
+    border: 0;
+    background-color: var(--ama);
+    padding: 10px
+}
+
+.botones{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Costos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100%/3);
+    margin: 10px;
+    border: 2px inset black;
+}
+
+.producto ul{
+    list-style: none;
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.producto li{
+    padding: 5px 0;
+}
+
+.producto .titulo{
+    background-color: #889ba1a3;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.producto h2{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 800px){
+    #Costos {
+        flex-direction: column;
+    }
+}

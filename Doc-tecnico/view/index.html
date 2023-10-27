@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="styles.css">
+<html>
+    <body>
+        <nav id="navbar">
+            <header>Node.js Documentation</header>
+            <ul>
+                <li>
+                    <a class="nav-link" href="#About_Documentation">About documentation</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#API_Reference_Documentation">API reference documentation</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#ES6_Features">ES6 features</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Guides">Guides</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Dependencies">Dependencies</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main id="main-doc">
+            <section id="About_Documentation" class="main-section">
+                <header>About documentation</header>
+                <p>There are several types of documentation available on this website:</p>
+                <ul>
+                    <li>API reference documentation</li>
+                    <li>ES6 features</li>
+                    <li>Guides</li>
+                    <li>Dependencies</li>
+                </ul>
+            </section>
+            <section class="main-section" id="API_Reference_Documentation">
+                <header>API reference documentation</header>
+                <p>
+                    The API reference documentation provides detailed information about a function or object in Node.js. 
+                    This documentation indicates what arguments a method accepts, the return value of that method, and what 
+                    errors may be related to that method. It also indicates which methods are available for different versions of Node.js.
+                </p>
+                <p>
+                    This documentation describes the built-in modules provided by Node.js. It does not document 
+                    modules provided by the community.
+                </p>
+            </section>
+            <section class="main-section" id="ES6_Features">
+                <header>ES6 Features</header>
+                <p>
+                    All ECMAScript 2015 (ES6) features are split into three groups for shipping, 
+                    staged, and in progress features:
+                </p>
+                <ul>
+                    <li style="text-align: justify;">
+                        All shipping features, which V8 considers stable, are turned on by default on Node.js 
+                        and do NOT require any kind of runtime flag.
+                    </li>
+                    <li style="text-align: justify;">
+                        Staged features, which are almost-completed features that are not considered stable 
+                        by the V8 team, require a runtime flag: <code><span style="color:white">--harmony<span></code>.
+                    </li>
+                    <li style="text-align: justify;">
+                        In progress features can be activated individually by their respective harmony flag, 
+                        although this is highly discouraged unless for testing purposes. Note: these flags are exposed by V8 
+                        and will potentially change without any deprecation notice.
+                    </li>
+                </ul>
+                <h1>How do I find which version of V8 ships with a particular version of Node.js?</h1>
+                <p>Node.js provides a simple way to list all dependencies and respective versions that 
+                    ship with a specific binary through the <code><span style="color:white">process</span></code> global object. In case of the V8 engine, 
+                    type the following in your terminal to retrieve its version:
+                </p>
+                <div>
+                    <code><span style="color:white">node -p process.versions.v8</span></code>
+                </div>
+            </section>
+            <section class="main-section" id="Guides">
+                <header>Guides</header>
+                <p>
+                    The Guides section has long-form, in-depth articles about Node.js technical features and capabilities.
+                </p>
+                <h1>How do I start with Node.js after I installed it?</h1>
+                <p>Once we have installed Node.js, let's build our first web server. Create a file named <code><span style="color:white">app.js</span></code>
+                    containing the following contents:
+                </p>
+                <div data-rehype-pretty-code-fragment=""><pre style="background-color:#2e3440ff" tabindex="0" data-language="javascript" data-theme="default"><code data-language="javascript" data-theme="default" style="display:grid"><span data-line=""><span style="color:#81A1C1">const</span><span style="color:#D8DEE9FF"> </span><span style="color:#D8DEE9">http</span><span style="color:#D8DEE9FF"> </span><span style="color:#81A1C1">=</span><span style="color:#D8DEE9FF"> </span><span style="color:#88C0D0">require</span><span style="color:#D8DEE9FF">(</span><span style="color:#ECEFF4">'</span><span style="color:#A3BE8C">http</span><span style="color:#ECEFF4">'</span><span style="color:#D8DEE9FF">)</span><span style="color:#81A1C1">;</span></span>
+                    <span data-line=""> </span>
+                    <span data-line=""><span style="color:#81A1C1">const</span><span style="color:#D8DEE9FF"> </span><span style="color:#D8DEE9">hostname</span><span style="color:#D8DEE9FF"> </span><span style="color:#81A1C1">=</span><span style="color:#D8DEE9FF"> </span><span style="color:#ECEFF4">'</span><span style="color:#A3BE8C">127.0.0.1</span><span style="color:#ECEFF4">'</span><span style="color:#81A1C1">;</span></span>
+                    <span data-line=""><span style="color:#81A1C1">const</span><span style="color:#D8DEE9FF"> </span><span style="color:#D8DEE9">port</span><span style="color:#D8DEE9FF"> </span><span style="color:#81A1C1">=</span><span style="color:#D8DEE9FF"> </span><span style="color:#B48EAD">3000</span><span style="color:#81A1C1">;</span></span>
+                    <span data-line=""> </span>
+                    <span data-line=""><span style="color:#81A1C1">const</span><span style="color:#D8DEE9FF"> </span><span style="color:#D8DEE9">server</span><span style="color:#D8DEE9FF"> </span><span style="color:#81A1C1">=</span><span style="color:#D8DEE9FF"> </span><span style="color:#D8DEE9">http</span><span style="color:#ECEFF4">.</span><span style="color:#88C0D0">createServer</span><span style="color:#D8DEE9FF">(</span><span style="color:#ECEFF4">(</span><span style="color:#D8DEE9">req</span><span style="color:#ECEFF4">,</span><span style="color:#D8DEE9FF"> </span><span style="color:#D8DEE9">res</span><span style="color:#ECEFF4">)</span><span style="color:#D8DEE9FF"> </span><span style="color:#81A1C1">=&gt;</span><span style="color:#D8DEE9FF"> </span><span style="color:#ECEFF4">{</span></span>
+                    <span data-line=""><span style="color:#D8DEE9FF">  </span><span style="color:#D8DEE9">res</span><span style="color:#ECEFF4">.</span><span style="color:#D8DEE9">statusCode</span><span style="color:#D8DEE9FF"> </span><span style="color:#81A1C1">=</span><span style="color:#D8DEE9FF"> </span><span style="color:#B48EAD">200</span><span style="color:#81A1C1">;</span></span>
+                    <span data-line=""><span style="color:#D8DEE9FF">  </span><span style="color:#D8DEE9">res</span><span style="color:#ECEFF4">.</span><span style="color:#88C0D0">setHeader</span><span style="color:#D8DEE9FF">(</span><span style="color:#ECEFF4">'</span><span style="color:#A3BE8C">Content-Type</span><span style="color:#ECEFF4">'</span><span style="color:#ECEFF4">,</span><span style="color:#D8DEE9FF"> </span><span style="color:#ECEFF4">'</span><span style="color:#A3BE8C">text/plain</span><span style="color:#ECEFF4">'</span><span style="color:#D8DEE9FF">)</span><span style="color:#81A1C1">;</span></span>
+                    <span data-line=""><span style="color:#D8DEE9FF">  </span><span style="color:#D8DEE9">res</span><span style="color:#ECEFF4">.</span><span style="color:#88C0D0">end</span><span style="color:#D8DEE9FF">(</span><span style="color:#ECEFF4">'</span><span style="color:#A3BE8C">Hello World</span><span style="color:#ECEFF4">'</span><span style="color:#D8DEE9FF">)</span><span style="color:#81A1C1">;</span></span>
+                    <span data-line=""><span style="color:#ECEFF4">}</span><span style="color:#D8DEE9FF">)</span><span style="color:#81A1C1">;</span></span>
+                    <span data-line=""> </span>
+                    <span data-line=""><span style="color:#D8DEE9">server</span><span style="color:#ECEFF4">.</span><span style="color:#88C0D0">listen</span><span style="color:#D8DEE9FF">(</span><span style="color:#D8DEE9">port</span><span style="color:#ECEFF4">,</span><span style="color:#D8DEE9FF"> </span><span style="color:#D8DEE9">hostname</span><span style="color:#ECEFF4">,</span><span style="color:#D8DEE9FF"> </span><span style="color:#ECEFF4">()</span><span style="color:#D8DEE9FF"> </span><span style="color:#81A1C1">=&gt;</span><span style="color:#D8DEE9FF"> </span><span style="color:#ECEFF4">{</span></span>
+                    <span data-line=""><span style="color:#D8DEE9FF">  </span><span style="color:#D8DEE9">console</span><span style="color:#ECEFF4">.</span><span style="color:#88C0D0">log</span><span style="color:#D8DEE9FF">(</span><span style="color:#ECEFF4">`</span><span style="color:#A3BE8C">Server running at http://</span><span style="color:#81A1C1">${</span><span style="color:#D8DEE9">hostname</span><span style="color:#81A1C1">}</span><span style="color:#A3BE8C">:</span><span style="color:#81A1C1">${</span><span style="color:#D8DEE9">port</span><span style="color:#81A1C1">}</span><span style="color:#A3BE8C">/</span><span style="color:#ECEFF4">`</span><span style="color:#D8DEE9FF">)</span><span style="color:#81A1C1">;</span></span>
+                    <span data-line=""><span style="color:#ECEFF4">}</span><span style="color:#D8DEE9FF">)</span><span style="color:#81A1C1">;</span></span></code></pre>
+                </div>
+                
+                <p>Now, run your web server using <code><span style="color:white">node app.js</span></code>. Visit <code><span style="color:white">http://localhost:3000</span></code> 
+                    and you will see a message saying "Hello World".
+                </p>
+            </section>
+            <section id="Dependencies" class="main-section">
+                <header>Dependencies</header>
+                <p>
+                    Node.js depends on additional components beyond the Node.js code itself. These dependencies provide 
+                    both native and JavaScript code and are built together with the code under the <code><span style="color:white">src</span></code> and <code><span style="color:white">lib</span></code> directories 
+                    to create the Node.js binaries.
+                </p>
+                <p>Refer to the <a href="https://nodejs.dev/en/learn/">Introduction to Node.js</a> for a more comprehensive guide to getting started with Node.js.</p>
+            </section>
+        </main>
+    </body>
+</html>

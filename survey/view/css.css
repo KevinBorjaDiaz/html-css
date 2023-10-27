@@ -1,0 +1,63 @@
+.centrar{
+    text-align: center;
+}
+
+fieldset{
+    background-color: rgb(23, 43, 53, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label{
+    display: block;
+    font-size: 20px;
+}
+
+input, select{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+select{
+    display: box;
+    vertical-align: middle;
+    color:rgb(164, 157, 157);
+}
+
+h1, p, label{
+    text-shadow: 0 0 3px orangered, 0 0 5px red;
+    color: rgb(217, 214, 214);
+}
+
+h1{
+    font-size: 5rem;
+    padding: 0 0;
+    margin: 0 0;
+}
+
+.p-grande{
+    font-size: 30px;
+    text-align: center;
+}
+
+body{
+    background-image: url(https://www.bartolomeconsultores.com/wp-content/uploads/2015/10/fondo-formulario.jpg);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  text-shadow: 0 0 3px orangered, 0 0 5px red;
+  margin: 0px 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"]{
+    width: 80%;
+}
+
+input[type="submit"] {
+    margin: 0 auto;
+    display: block;
+}

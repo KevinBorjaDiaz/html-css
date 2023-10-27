@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+        
+        <title>Eloboost SanLuis</title>
+    </head>
+    <body>
+        <div id="pagina_completa">
+            <header id="header" class="main-header">
+            <span>
+                <img id="header-img" src="https://scontent.fmxl1-1.fna.fbcdn.net/v/t39.30808-6/300412561_190499633346945_51144774104969974_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=hIlFER6SBoUAX-FlZRn&_nc_ht=scontent.fmxl1-1.fna&oh=00_AfBY-mcsTOQlhTpFQK3190L3fXHx8sgo7y6d196E_4kXiA&oe=652CF293">
+                <p>ELOBOOST SANLUIS</p>
+            </span>
+            <div>
+                <nav id="nav-bar" class="navbar">
+                    <ul>
+                        <li>
+                            <a href="#v" class="nav-link">Ventajas</a>
+                        </li>
+                        <li>
+                            <a href="#Como_funciona" class="nav-link">Como funciona</a>
+                        </li>
+                        <li>
+                            <a href="#Costos" class="nav-link">Costos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            </header>
+            <!--fin de header-->
+            
+            <section id="suscripcion">
+                <h2>Discreto, rápido y seguro</h2>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <input name="email" id="email" type="email" placeholder="Ingresa tu email" required>
+                    <input id="submit" type="submit" value="Suscribete Ahora!">
+                </form>
+            </section>
+            <pre id="v"></pre>
+            <!--fin del form-->
+            
+            <div class="container">
+                <div>
+                    <section id="Ventajas">
+
+                        <div class="ventaja">
+                            <div class="icono">
+                                <i class="fas fa-users fa-4x"></i>
+                            </div>
+                            <div class="descripcion">
+                                <h1>Solo o en equipo</h1>
+                                <p>
+                                    Puedes disfrutar de nuestros servicios jugando solo mientras uno de nuestros coach especta la partida
+                                    o jugando en conjunto mientras te guía paso a paso a lo largo de la partida.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="ventaja">
+                            <div class="descripcion">
+                                <h1>Rápido y seguro</h1>
+                                <p>
+                                    Los resultados varían dependiendo de la modalidad y cantidad de tiempo a invertir pero los resultados
+                                    están 100% asegurados y si hay algún detalle con el que no estes satisfecho, te devolvemos tu dinero!
+                                </p>
+                            </div>
+                            <div class="icono">
+                                <i class="fa fa-business-time fa-4x"></i>
+                            </div>
+                        </div>
+
+                        <div class="ventaja">
+                            <div class="icono">
+                                <i class="fa fa-user-secret fa-4x"></i>
+                            </div>
+                            <div class="descripcion">
+                                <h1>Discreto y privado</h1>
+                                <p>
+                                    Ninguna información tanto personal como dentro del juego serán reveladas en ningun momento e incluso
+                                    puedes escoger una variedad de campeones a utilizar para garantizar tu identidad.
+                                </p>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+                <!--fin de ventajas-->
+                <section class="slider" id="Como_funciona">
+                    <div>
+                        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/zakg6hhTD5c?si=tNI-lZNxkpcun6ro" title="KingSlayer" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/cQTo9O85Zro?si=HHP8yJny0dx9SGdO" title="NewDance" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ucFZL8PedUA?si=GPRFedj9bFVN4Eze" title="YouTube video player" allowfullscreen></iframe>
+                    </div>
+                </section>
+                <div class="botones">
+                    <button class="btn-a">Anterior</button>
+                    <button class="btn-d">Siguiente</button>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+            
+                <script>
+                    $(document).ready(function(){
+                        $('.slider').slick({
+                            nextArrow: $('.btn-d'),
+                            prevArrow: $('.btn-a')
+                        });
+                    });
+                </script>
+                
+                <!--fin de como funciona-->
+                <hr>
+
+                <section id="Costos">
+                    <div class="producto">
+                        <div class="titulo">1 mes</div>
+                        <h2>1000$</h2>
+                        <ul>
+                            <li>Unete a 1millon de jugadores</li>
+                            <li>que han mejorado gracias a </li>
+                            <li>la ayuda de Eloboost SanLuis</li>
+                        </ul>
+                        <input type="submit" value="Seleccionar">
+                    </div>
+                    <div class="producto">
+                        <div class="titulo">2 mes</div>
+                        <h2>1800$</h2>
+                        <ul>
+                            <li>Unete a 1millon de jugadores</li>
+                            <li>que han mejorado gracias a </li>
+                            <li>la ayuda de Eloboost SanLuis</li>
+                        </ul>
+                        <input type="submit" value="Seleccionar">
+                    </div>
+                    <div class="producto">
+                        <div class="titulo">1 año</div>
+                        <h2>10,000$</h2>
+                        <ul>
+                            <li>Unete a 1millon de jugadores</li>
+                            <li>que han mejorado gracias a </li>
+                            <li>la ayuda de Eloboost SanLuis</li>
+                        </ul>
+                        <input type="submit" value="Seleccionar">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
